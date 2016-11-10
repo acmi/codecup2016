@@ -1,0 +1,19 @@
+gnu.trove.iterator.TIterator -> a.a.b.d:
+    boolean hasNext() -> hasNext
+    void remove() -> remove
+gnu.trove.impl.hash.THashIterator -> a.a.a.a.b:
+    gnu.trove.impl.hash.TObjectHash _object_hash -> d
+    gnu.trove.impl.hash.THash _hash -> a
+    int _expectedSize -> b
+    int _index -> c
+    void <init>(gnu.trove.impl.hash.TObjectHash) -> <init>
+    java.lang.Object next() -> next
+    boolean hasNext() -> hasNext
+    void remove() -> remove
+    void moveToNextIndex() -> a
+    int nextIndex() -> b
+    java.lang.Object objectAtIndex(int) -> a
+gnu.trove.iterator.hash.TObjectHashIterator -> a.a.b.a.a:
+    gnu.trove.impl.hash.TObjectHash _objectHash -> d
+    void <init>(gnu.trove.impl.hash.TObjectHash) -> <init>
+    java.lang.Object objectAtIndex(int) -> a

@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        flatDir dirs: '../lib'
+    }
+    dependencies {
+        classpath ':proguard'
+    }
+}
+
+apply plugin: 'java'
+
+task proguard(type: proguard.gradle.ProGuardTask) {
+    injars 'build/libs/trove.jar'
+    outjars 'build/libs/trove_proguard.jar'
+
+    libraryjars "${System.getProperty('java.home')}/lib/rt.jar"
+
+    dontshrink()
+
+    printmapping 'proguard.map'
+}
