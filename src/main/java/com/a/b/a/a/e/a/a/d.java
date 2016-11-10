@@ -6,13 +6,15 @@ package com.a.b.a.a.e.a.a;
 import com.a.b.a.a.e.a.a.c;
 import com.a.b.a.a.e.a.a.e;
 import com.a.b.a.a.e.a.f;
-import com.codeforces.a.b;
 import com.codeforces.commons.io.FileUtil;
 import com.codeforces.commons.io.IoUtil;
 import com.codeforces.commons.math.Math;
 import com.codeforces.commons.math.NumberUtil;
 import com.codeforces.commons.process.ThreadUtil;
 import com.codeforces.commons.text.StringUtil;
+import com.codeforces.jrun.Outcome;
+import com.codeforces.jrun.Params;
+import com.codeforces.jrun.ProcessRunner;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -62,9 +64,9 @@ implements c {
         catch (IOException iOException) {
             String string = String.format("Can't start %s on %d.", this.getClass().getSimpleName(), n2);
             a.error(string, iOException);
-            com.codeforces.a.a a2 = com.codeforces.a.c.a("netstat -n -a -b -o", new b.a().a(10000).a());
-            if (StringUtil.isNotBlank(a2.a())) {
-                a.error("'netstat -n -a -b -o' outputs: " + a2.a());
+            Outcome a2 = ProcessRunner.run("netstat -n -a -b -o", new Params.Builder().setTimeLimit(10000).newInstance());
+            if (StringUtil.isNotBlank(a2.getOutput())) {
+                a.error("'netstat -n -a -b -o' outputs: " + a2.getOutput());
             }
             throw new f(string, iOException);
         }
