@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+repositories{
+    mavenCentral()
+    maven{ url 'https://github.com/Codeforces/codeforces-commons/raw/master/repo/maven/' }
+}
+
+dependencies{
+    compile group: 'com.codeforces', name: 'commons', version: '2.3-SNAPSHOT'
+}

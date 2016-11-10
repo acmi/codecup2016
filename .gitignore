@@ -1,0 +1,12 @@
+# Gradle
+/.gradle/
+/build/
+
+# IntelliJ IDEA
+/.idea/
+
+# Android
+/local.properties
+
+# Mac OS
+.DS_Store

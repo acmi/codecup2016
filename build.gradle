@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+repositories{
+    mavenCentral()
+    maven{ url 'https://github.com/Codeforces/codeforces-commons/raw/master/repo/maven/' }
+}
+
+dependencies{
+    compile project(':jrun')
+    compile project(':notreal2d')
+}
